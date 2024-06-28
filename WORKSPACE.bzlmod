@@ -1,0 +1,18 @@
+workspace(name = "build_stack_rules_proto")
+
+# rules_scala is not yet in the bzlmod registry.
+load("//deps:scala_deps.bzl", "io_bazel_rules_scala")
+io_bazel_rules_scala()
+
+# rules_closure is not yet in the bzlmod registry.
+load("//deps:closure_deps.bzl", "io_bazel_rules_closure")
+io_bazel_rules_closure()
+
+load("//deps:grpc_node_deps.bzl", "com_github_grpc_grpc_node_packages_grpc_tools_src")
+com_github_grpc_grpc_node_packages_grpc_tools_src()
+
+load("//deps:grpc_web_deps.bzl", "grpc_web_deps")
+grpc_web_deps()
+
+load("//deps:grpc_js_deps.bzl", "grpc_js_deps")
+grpc_js_deps()
